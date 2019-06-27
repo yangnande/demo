@@ -1,0 +1,12 @@
+.box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .vscode-icon {
+    margin: 20px 0;
+    width: 186px;
+    height: 186px;
+    background-image: url('../assets/vscode.png');
+    background-size: 100% 100%;
+  }
+}

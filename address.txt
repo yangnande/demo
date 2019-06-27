@@ -1,0 +1,36 @@
+手机版地址：
+首页         http://111.20.119.234:9080/medical/client-home/client-home.html
+商品详情     http://111.20.119.234:9080/medical/medical-detail/medical-detail.html?goodsId=商品ID
+健康档案     http://111.20.119.234:9080/medical/health-record/health-record.html
+/**
+*type订单类型，a：待付款、b：待取货、c：已取消
+*/
+我的订单     http://111.20.119.234:9080/medical/my-order/my-order.html?type=订单类型
+我的收藏     http://111.20.119.234:9080/medical/my-store/my-store.html
+/**
+*caseId电子病历id
+*/
+电子病历     http://111.20.119.234:9080/medical/medical-record/medical-record.html?caseId=电子病历id
+搜索         http://111.20.119.234:9080/medical/products/products-search.html
+搜索列表     http://111.20.119.234:9080/medical/products/products-list.html
+确认订单     http://111.20.119.234:9080/medical/order/order-confirm.html?ids=100,200,101(购物车id串)
+订单提交成功  http://111.20.119.234:9080/medical/order/order-submit.html?orderCode=订单号&payMoney=支付金额
+支付结果     http://111.20.119.234:9080/medical/order/payment-success.html
+/**
+ *type跳转类型，a：视频、b：语音、c：图文，d:确认订单
+ *无type，属于患者页面，点击列表不跳转回去。
+ */
+患者管理		 http://111.20.119.234:9080/medical/patient/patient-management.html?type=xxx
+患者信息		 http://111.20.119.234:9080/medical/patient/patient-information.html
+添加患者		 http://111.20.119.234:9080/medical/patient/patient-add.html
+购物车       http://111.20.119.234:9080/medical/order/cart.html
+药品分类     http://111.20.119.234:9080/medical/medical-sort/medical-sort.html
+/**
+ *caseId: 代表从消息中心跳转，根据值显示相应的数据
+ *无caseId: 代表从问诊下一步跳转过来，不用显示电子病历和数据。
+ */
+问诊结果页   http://111.20.119.234:9080/medical/inquiry-result/inquiry-result.html?caseId=病历ID
+患者常用药品 http://111.20.119.234:9080/medical/common-cure/common-cure.html?patientId=患者ID
+
+自助柜机地址：
+
