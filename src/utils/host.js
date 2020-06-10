@@ -21,7 +21,7 @@ switch (env) {
     break
   case 't':
     // host_boss = 'https://app.10086.cn/biz-V2.2/'
-    host_boss = 'https://www.easy-mock.com/mock/5d00a7defad3d113f09f7d43/biz-medicine/' // easymock地址
+    host_boss = 'https://www.easy-mock.com/mock/5d1c501a6daa341a21cd1454/_copy/biz-medicine/' // easymock地址
     break
   case 'p':
     host_boss = 'http://192.168.10.115:8185/biz-medicine/' // 西安接口地址
@@ -29,5 +29,6 @@ switch (env) {
     break
 }
 export {
-  host_boss, host_boss1
+  host_boss,
+  host_boss1
 }

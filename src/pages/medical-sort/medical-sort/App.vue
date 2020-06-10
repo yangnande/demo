@@ -17,7 +17,7 @@
 import NavBar from './components/nav-bar'
 import IconContent from './components/icon-content'
 import {getNavtationAllData} from './getData'
-import {openNewPage, host, getUserInfo, getAtInfo} from '../../../utils/common'
+import {openNewPage, host} from '../../../utils/common'
 import {mapState} from 'vuex'
 import { Toast } from 'mint-ui'
 export default {
@@ -42,7 +42,7 @@ export default {
      */
     async init () {
       // 获取用户信息
-      this.$store.state.userInfo = await getUserInfo()
+      // this.$store.state.userInfo = await getUserInfo()
       this.getElementHeight()
       this.getData()
     },
@@ -61,9 +61,10 @@ export default {
     async getData () {
       let data = null
       // 获取柜机id
-      let atmInfo = await getAtInfo()
-      const rsqBody = { atmId: atmInfo.atmId }
-      if (atmInfo.atmId) {
+      // let atmInfo = await getAtInfo()
+      let atmId = '9'
+      const rsqBody = { atmId: atmId }
+      if (atmId) {
         data = await getNavtationAllData(this.userInfo, rsqBody)
         if (data.retCode === '000000') {
           this.$store.state.allData = data.rspBody

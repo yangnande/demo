@@ -1,0 +1,31 @@
+.sprite {
+  background-image: url("/public/sprite/leadeon-ui-sprite.png");
+  background-size: 118px 118px;
+  background-repeat: no-repeat;
+}
+@mixin sprite($filename) {
+  @if $filename == "error" {
+    @extend .sprite;
+    background-position: 0px 0px;
+    height: 56px;
+    width: 56px;
+  }
+  @if $filename == "left" {
+    @extend .sprite;
+    background-position: -62px -62px;
+    height: 40px;
+    width: 40px;
+  }
+  @if $filename == "success" {
+    @extend .sprite;
+    background-position: -62px 0px;
+    height: 56px;
+    width: 56px;
+  }
+  @if $filename == "warning" {
+    @extend .sprite;
+    background-position: 0px -62px;
+    height: 56px;
+    width: 56px;
+  }
+}
