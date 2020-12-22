@@ -2217,12 +2217,6 @@ dom-serializer@0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom7@^2.1.3:
-  version "2.1.3"
-  resolved "https://registry.npm.taobao.org/dom7/download/dom7-2.1.3.tgz#a736f9c3bfbc4ca039a81cd095f97d1d7f3de19c"
-  dependencies:
-    ssr-window "^1.0.1"
-
 domain-browser@^1.1.1:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/domain-browser/download/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
@@ -4020,6 +4014,10 @@ is-directory@^0.3.1:
   version "0.3.1"
   resolved "http://registry.npm.taobao.org/is-directory/download/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
 
+is-docker@^2.0.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.1.1.tgz#4125a88e44e450d384e09047ede71adc2d144156"
+
 is-dotfile@^1.0.0:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/is-dotfile/download/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
@@ -4187,6 +4185,12 @@ is-windows@^1.0.1, is-windows@^1.0.2:
 is-wsl@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/is-wsl/download/is-wsl-1.1.0.tgz#1f16e4aa22b04d1336b66188a66af3c600c3a66d"
+
+is-wsl@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/is-wsl/-/is-wsl-2.2.0.tgz#74a4c76e77ca9fd3f932f290c17ea326cd157271"
+  dependencies:
+    is-docker "^2.0.0"
 
 isarray@0.0.1:
   version "0.0.1"
@@ -4617,6 +4621,12 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
+lru-cache@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
+  dependencies:
+    yallist "^4.0.0"
+
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/make-dir/download/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -5043,14 +5053,16 @@ node-libs-browser@^2.0.0:
     util "^0.10.3"
     vm-browserify "0.0.4"
 
-node-notifier@^5.1.2:
-  version "5.2.1"
-  resolved "http://registry.npm.taobao.org/node-notifier/download/node-notifier-5.2.1.tgz#fa313dd08f5517db0e2502e5758d664ac69f9dea"
+node-notifier@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/node-notifier/-/node-notifier-8.0.1.tgz#f86e89bbc925f2b068784b31f382afdc6ca56be1"
   dependencies:
     growly "^1.3.0"
-    semver "^5.4.1"
+    is-wsl "^2.2.0"
+    semver "^7.3.2"
     shellwords "^0.1.1"
-    which "^1.3.0"
+    uuid "^8.3.0"
+    which "^2.0.2"
 
 node-pre-gyp@^0.10.0:
   version "0.10.3"
@@ -6658,7 +6670,7 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.5"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1:
+"semver@2 || 3 || 4 || 5", semver@^5.3.0:
   version "5.5.0"
   resolved "http://registry.npm.taobao.org/semver/download/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
@@ -6669,6 +6681,12 @@ semver@5.3.0, semver@~5.3.0:
 semver@^4.1.0:
   version "4.3.6"
   resolved "http://registry.npm.taobao.org/semver/download/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
+
+semver@^7.3.2:
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.4.tgz#27aaa7d2e4ca76452f98d3add093a72c943edc97"
+  dependencies:
+    lru-cache "^6.0.0"
 
 semver@~5.0.3:
   version "5.0.3"
@@ -7029,10 +7047,6 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-ssr-window@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npm.taobao.org/ssr-window/download/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
-
 ssri@^5.2.4:
   version "5.3.0"
   resolved "http://registry.npm.taobao.org/ssri/download/ssri-5.3.0.tgz#ba3872c9c6d33a0704a7d71ff045e5ec48999d06"
@@ -7245,12 +7259,9 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-swiper@^4.0.7:
-  version "4.5.0"
-  resolved "https://registry.npm.taobao.org/swiper/download/swiper-4.5.0.tgz#4d870bec4f5abe2fb259325849dd2641c9243c0d"
-  dependencies:
-    dom7 "^2.1.3"
-    ssr-window "^1.0.1"
+swiper@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-3.4.2.tgz#39d6b410b1a39833e1f72d3b72999df5f5e38392"
 
 table@4.0.2:
   version "4.0.2"
@@ -7638,6 +7649,10 @@ uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.3.2"
   resolved "http://registry.npm.taobao.org/uuid/download/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 
+uuid@^8.3.0:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+
 v8flags@^2.0.2:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/v8flags/download/v8flags-2.1.1.tgz#aab1a1fa30d45f88dd321148875ac02c0b55e5b4"
@@ -7729,12 +7744,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-awesome-swiper@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.npm.taobao.org/vue-awesome-swiper/download/vue-awesome-swiper-3.1.3.tgz#05500b501ffb3fec9bf7eb9985bcf4ae8360ed9e"
+vue-awesome-swiper@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-2.6.7.tgz#23b12cf107503305c267df3c7c2903fb39896cd0"
   dependencies:
-    object-assign "^4.1.1"
-    swiper "^4.0.7"
+    swiper "^3.4.2"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
@@ -7967,9 +7981,15 @@ which-module@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/which-module/download/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
 
-which@1, which@^1.2.14, which@^1.2.9, which@^1.3.0:
+which@1, which@^1.2.14, which@^1.2.9:
   version "1.3.1"
   resolved "http://registry.npm.taobao.org/which/download/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
+  dependencies:
+    isexe "^2.0.0"
+
+which@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/which/-/which-2.0.2.tgz#7c6a8dd0a636a0327e10b59c9286eee93f3f51b1"
   dependencies:
     isexe "^2.0.0"
 
@@ -8056,6 +8076,10 @@ yallist@^2.1.2:
 yallist@^3.0.0, yallist@^3.0.2:
   version "3.0.2"
   resolved "http://registry.npm.taobao.org/yallist/download/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
+
+yallist@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
 
 yargs-parser@^4.2.0:
   version "4.2.1"
